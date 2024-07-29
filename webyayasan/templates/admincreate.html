@@ -1,0 +1,47 @@
+
+    <div class="container-fluid">
+        <div class="card shadow">
+            <div class="card-header">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">create</h1>
+                    <a href=""
+                        class="btn btn-success btn-sm shadow-sm"></a>
+                </div>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" class="form-control" id="description" cols="30" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">klik</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Content Row -->
+
+    </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
+    <script>
+        function SimpleUploadAdapterPlugin(editor) {
+            editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+                // Configure the URL to the upload script in your back-end here!
+                return new MyUploadAdapter(loader);
+            };
+        }
+
+        ClassicEditor
+            .create(document.querySelector('#description'), {
+                extraPlugins: [SimpleUploadAdapterPlugin],
+                mediaEmbed: {
+                    previewsInData: true
+                },
+            })
+
+            .catch(error => {
+                console.error(error);
+            });
+    </script>

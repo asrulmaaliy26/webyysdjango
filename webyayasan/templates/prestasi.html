@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}SMK Telkom Purwokerto{% endblock %}
+{% block content %}
+
+  <section>
+    <img style="width: 100%; margin-top: 60px;" src="https://placehold.co/800x300" alt="">
+  </section>
+
+
+  <!-- section -->
+  <div class="container p1 pt-5 pb-5">
+      <div class="row">
+        <div class="col-sm-9">
+            <div class="row pt-4">
+              {% if posts_asia %}
+              {% for post in posts_asia %}
+                <h4>TINGKAT ASIA<br><br></h4>
+                   <p>{{post.postname}}</p>
+                {% endfor %}
+                {% else %}
+                <p><br>.</p>
+                {% endif %}
+              </div>
+              <div class="row pt-4">
+                {% if posts_nasional %}
+                {% for post in posts_nasional %}
+                <h4>TINGKAT NASIONAL<br><br></h4>
+                   <p>{{post.postname}}</p>
+                {% endfor %}
+                {% else %}
+                <p><br></p>
+                {% endif %}
+              </div>
+              <div class="row pt-4">
+                {% if posts_provinsi %}
+                {% for post in posts_provinsi %}
+                <h4>TINGKAT PROVINSI<br><br></h4>
+                   <p>{{post.postname}}</p>
+                {% endfor %}
+                {% else %}
+                <p><br></p>
+                {% endif %}
+              </div>
+              <div class="row pt-4">
+                {% if posts_kabupaten %}
+                {% for post in posts_kabupaten %}
+                <h4>TINGKAT KABUPATEN<br><br></h4>
+                   <p>{{post.postname}}</p>
+                {% endfor %}
+                {% else %}
+                <p><br></p>
+                {% endif %}
+              </div>
+        </div>
+        <div class="col-sm-3 pr">
+            <div class="row pt-4">
+                <h2>Prestasi Terbaru</h2>
+            </div>
+            <div class="row pt-">
+              {% if recent_posts %}
+              {% for post in recent_posts %}
+                <div class="card mt-5" style="width: 18rem;">
+                    <img class="card-img-top" src="{{media_url}}{{post.image}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{post.postname}}</h5>
+                      <p class="card-text">{{post.content|truncatewords:20|safe}}</p>
+                    </div>
+                </div>
+                
+                {% endfor %}
+                {% else %}
+                <p><br></p>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+  </div>
+  <!-- akhir section -->
+
+{% endblock %}

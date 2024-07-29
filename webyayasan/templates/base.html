@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="icon" href="{% static 'assets/img/illus_grcs.svg' %}" type="image/x-icon">
+
+  {% include "snippets/styles.html" %}
+  
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content {
+      flex: 1;
+    }
+  </style>
+  {% block extra_styles %}
+  <!-- Additional CSS can be added here -->
+   
+  {% endblock %}
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  {% include 'snippets/navbar.html' %}
+  <!-- AKHIR NAVBAR -->
+
+  <main class="content">
+    {% block content %}
+    <!-- Main content will be injected here -->
+    {% endblock %}
+  </main>
+
+  {% include 'snippets/scripts.html' %}
+  <!-- Footer -->
+  {% include 'snippets/footer.html' %}
+  <!-- End Footer -->
+
+
+  {% block extra_scripts %}
+  <!-- Additional scripts can be added here -->
+  {% endblock %}
+</body>
+
+</html>

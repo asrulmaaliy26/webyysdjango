@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}SMK Telkom Purwokerto{% endblock %}
+{% block content %}
+
+  <section>
+    <img style="margin-top: 60px;" width="100%" src="https://placehold.co/800x300" alt="">
+  </section>
+
+  <!-- faq -->
+  <div class="container-fluid pt-5">
+    <div class="container pt-5">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="ppdb-tab" data-bs-toggle="tab" data-bs-target="#ppdb" type="button" role="tab" aria-controls="ppdb" aria-selected="false">PPDB</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div style="text-decoration: none;" class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+          <a href="ppdb.html">
+            <p class="pt-5">(+) Bagaimana Cara Mendaftar di SMK Telkom Secara Online?</p>
+          </a>
+          <a href="jurusan.html">
+            <p class="pt-3">(+) Jurusan Apa Saja yang Ada di SMK Telkom Purwokerto?</p>
+          </a>
+          <a href="helpdesk.html">
+            <p class="pt-3">(+) Dimana Lokasi SMK Telkom Purwokerto?</p>
+          </a>
+        </div>
+        <div class="tab-pane fade" id="ppdb" role="tabpanel" aria-labelledby="ppdb-tab">
+          <a href="ppdb.html">
+            <p class="pt-5">(+) Bagaimana Cara Mendaftar di SMK Telkom Secara Online?</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- akhir faq -->
+
+
+  <!-- sec 2 -->
+  <div class="container-fluid faq2 pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <h1>Tidak Menemukan Jawaban Yang Anda Cari?</h1>
+        <a href="#tanya" class="text-center pt-5 pb-5"><button type="button" class="btn btn-warning">Kirim Pertanyaan</button></a>
+      </div>
+    </div>
+  </div>
+  <!-- akhir sec 2 -->
+
+  <!-- faq3 -->
+  <div class="container mb-5">
+    <h2>Contact Us</h2>
+    {% if success_message %}
+        <div class="alert alert-success" role="alert">
+            {{ success_message }}
+        </div>
+    {% endif %}
+    <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_name">Name</label>
+            {{ form.name }}
+        </div>
+        <div class="form-group">
+            <label for="id_email">Email</label>
+            {{ form.email }}
+        </div>
+        <div class="form-group">
+            <label for="id_subject">Subject</label>
+            {{ form.subject }}
+        </div>
+        <div class="form-group">
+            <label for="id_message">Message</label>
+            {{ form.message }}
+        </div>
+        <button type="submit" class="btn btn-primary m-1">Submit</button>
+    </form>
+</div>
+  <!-- akhir faq3 -->
+
+
+  {% endblock %}

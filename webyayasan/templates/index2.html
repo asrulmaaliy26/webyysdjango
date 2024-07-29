@@ -1,0 +1,609 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMK Telkom Purwokerto</title>
+    <link rel="stylesheet" href="{% static 'WebSekolah/assets/style.css' %}" />
+    <!-- fa -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- c -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/carousnap/carousnap@v1.3/carousnap/carousnap.css"
+      type="text/css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="slideshow-container">
+      <div class="mySlides" style="display: none">
+        <img src="https://placehold.co/800x300" width="100%" />
+      </div>
+      <div class="mySlides" style="display: none">
+        <img src="https://placehold.co/800x300/ff0000/000000" width="100%" />
+      </div>
+      <div class="mySlides" style="display: none">
+        <img src="https://placehold.co/800x300/00ff00/000000" width="100%" />
+      </div>
+
+      <!-- Dots/circles -->
+      <div id="dots-container" style="text-align: center; margin-top: 10px">
+        <span
+          class="dot"
+          style="
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+          "
+        ></span>
+        <span
+          class="dot"
+          style="
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+          "
+        ></span>
+        <span
+          class="dot"
+          style="
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+          "
+        ></span>
+      </div>
+    </div>
+
+    <!-- tab -->
+    <div class="container-fluid pb-5">
+      <div class="container pt-5">
+        <ul class="nav nav-tabs" id="myTab  " role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="fas-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#fas"
+              type="button"
+              role="tab"
+              aria-controls="fas"
+              aria-selected="true"
+            >
+              Fasilitas
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="katalog-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#katalog"
+              type="button"
+              role="tab"
+              aria-controls="katalog"
+              aria-selected="false"
+            >
+              Katalog
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="visimisi-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#visimisi"
+              type="button"
+              role="tab"
+              aria-controls="visimisi"
+              aria-selected="false"
+            >
+              Visi Misi
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="kegiatan-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#kegiatan"
+              type="button"
+              role="tab"
+              aria-controls="kegiatan"
+              aria-selected="false"
+            >
+              Kegiatan
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pres-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#pres"
+              type="button"
+              role="tab"
+              aria-controls="pres"
+              aria-selected="false"
+            >
+              Prestasi
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <!-- FASILITAS -->
+          <div
+            class="tab-pane fade show active"
+            id="fas"
+            role="tabpanel"
+            aria-labelledby="fas-tab"
+          >
+            <!-- paskib -->
+            <!-- tari -->
+            <div
+              style="background-color: rgb(234, 248, 255)"
+              class="container-fluid pt-5 pb-5"
+            >
+              <div class="container tari pb-5">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <h3>Tari Tradisional</h3>
+                    <div
+                      style="
+                        padding: 2%;
+                        background: #a4bfc7 !important;
+                        border: none !important;
+                        border-radius: 1% !important;
+                      "
+                      class="card mt-5"
+                    >
+                      <div class="card-body">
+                        <img
+                          style="width: 100%"
+                          src="{% static 'WebSekolah/assets/img/ekskul/tari.jpg' %}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <h3>Dance</h3>
+                    <div
+                      style="
+                        padding: 2%;
+                        background: #a4bfc7 !important;
+                        border: none !important;
+                        border-radius: 1% !important;
+                      "
+                      class="card mt-5 mb-4"
+                    >
+                      <div class="card-body">
+                        <img
+                          style="width: 100%"
+                          src="{% static 'WebSekolah/assets/img/ekskul/dance.jpg' %}"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- tari -->
+          </div>
+          <!-- AKHIR FASILITAS -->
+
+          <!-- KATALOG -->
+          <div
+            class="tab-pane fade"
+            id="katalog"
+            role="tabpanel"
+            aria-labelledby="katalog-tab"
+          >
+            <!-- section 2 -->
+            <section>
+              <div class="container pt-5 pb-5 j1">
+                <h4 class="text-center pt-5 pb-5">TEKNIK JARINGAN AKSES</h4>
+                <div class="row pt-5">
+                  <div class="col-md-6">
+                    <p class="mt-4">
+                      Merupkanan program ilmu kejuruan yang mempelajari tentang
+                      jaringan, baik itu jaringan Akses Kabel (Tembaga, Coaxial,
+                      Fiber Optik) maupun Nirkabel (Radio, Gelombang Mikro).
+                    </p>
+                    <div class="row mt-5">
+                      <div class="container-fluid">
+                        <iframe
+                          style="border-radius: 10px"
+                          width="100%"
+                          height="315"
+                          src="https://www.youtube.com/embed/bmXh-9sEt38"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <img
+                      style="width: 100%; margin-left: 30px"
+                      src="{% static 'WebSekolah/assets/img/tja.png' %}"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- akhir sec 2 -->
+          </div>
+          <!-- AKHIR KATALOG -->
+          <!-- KATALOG -->
+          <div
+            class="tab-pane fade"
+            id="visimisi"
+            role="tabpanel"
+            aria-labelledby="visimisi-tab"
+          >
+            <section>
+              <div class="container-fluid pt-5 pb-5 profil">
+                <div class="container pt-5 pb-5">
+                  <div class="row">
+                    <h3
+                      style="font-weight: 500; font-size: 36px"
+                      class="pt-5 text-center"
+                    >
+                      Visi Misi
+                    </h3>
+                    <h4 class="pt-3 pb-4 text-center">
+                      Sekolah Telematika Terbaik se-Indonesia
+                    </h4>
+                    <div style="width: 100%" class="container">
+                      <img
+                        style="width: 100%"
+                        src="{% static 'WebSekolah/assets/img/tefa.jpg' %}"
+                        alt=""
+                      />
+                    </div>
+                    <p class="pt-5">
+                      Telkom Schools SMK Telkom Purwokerto didirikan pada
+                      tanggal 30 Januari 1993, dengan surat dari Kepala Kantor
+                      Wilayah Depdikbud Propinsi Jawa Tengah No.130/103/I/1993
+                      tanggal 22 Januari 1993, tentang persetujuan pendirian
+                      sekolah swasta yang diselenggarakan oleh Yayasan
+                      Sandhykara Putra Telkom dan diresmikan oleh Menparpostel
+                      Bapak Soesilo Soedarman.
+                    </p>
+                    <p class="pt-3">
+                      Kurikulum pertama yang dipergunakan adalah kurikulum 1984
+                      dengan Rumpun Teknik Elektro Jurusan Jaringan Kabel.
+                      Kurikulum ini dikembangkan mengacu pada Pendidikan
+                      Menengah dengan kemampuan umum setara SMA dan kemampuan
+                      kejuruan setara STM. Meskipun sekolah baru, input siswa
+                      relatif bagus karena rasio pendaftar dibanding yang
+                      diterima adalah 9 : 1. Selain itu, terdapat kurikulum
+                      khusus untuk siswa karyawan program 1 tahun dan 2 tahun
+                      yang berjumlah 3 angkatan. Pada tahun 1995-2000,
+                      diterapkan kurikulum 1994 yang pengembangannya masih
+                      mengacu kurikulum sebelumnya dengan tujuan membentuk
+                      alumni yang berotot SMK dan berotak SMA. Pada tahun 1995,
+                      input siswa mengalami booming yaitu rasio pendaftar
+                      dibanding yang diterima adalah 12 : 1.
+                    </p>
+                    <p class="pt-3">
+                      Tahun berikutnya yaitu tahun 2000-2004, diterapkan
+                      kurikulum 1999 dengan menyesuaikan perubahan nama Jurusan
+                      Jaringan Kabel menjadi Program Keahlian Teknik Jaringan
+                      Akses Pelanggan. Selain itu, SMK Telkom Purwokerto juga
+                      mendirikan program keahlian baru (tahun 2000) yaitu Teknik
+                      Informatika yang merupakan program keahlian ketiga yang
+                      dibuka di Indonesia setelah SMK Telkom Malang dan Jakarta.
+                    </p>
+                    <p class="pt-3">
+                      Mulai tahun 2004, pemerintah memberlakukan Kurikulum
+                      Berbasis Kompetensi (KBK) yaitu Kurikulum 2004, dan SMK
+                      Telkom Purwokerto juga memberlakukan kurikulum tersebut
+                      disertai pengembangannya. Pada kurikulum ini (tahun 2004),
+                      Teknik Informatika yang semula merupakan program keahlian
+                      dari Teknik Telekomunikasi sekarang berubah menjadi Bidang
+                      Keahlian dengan nama Teknologi Informasi dan Komunikasi
+                      yang memiliki empat program keahlian yaitu Teknik Komputer
+                      dan Jaringan, Rekayasa Perangkat Lunak, Multimedia, dan
+                      Teknik Penyiaran Radio. Sedangkan Program Keahlian Teknik
+                      Jaringan Akses Pelanggan terbagi menjadi dua program
+                      keahlian yaitu Teknik Akses Kabel dan Teknik Akses Radio.
+                      Pada saat yang bersamaan, SMK Telkom Purwokerto harus
+                      memilih program keahlian yang disesuaikan yaitu Program
+                      Keahlian Teknik Akses Radio dan Teknik Komputer dan
+                      Jaringan. Pada perkembangannya di tahun 2005, SMK Telkom
+                      Purwokerto menambah satu program keahlian lagi yaitu
+                      Rekayasa Perangkat Lunak.
+                    </p>
+                  </div>
+                  <div class="row pt-5 pb-5">
+                    <div class="col-md-6">
+                      <h3
+                        style="
+                          font-weight: 600;
+                          color: #640202;
+                          font-size: 36px;
+                        "
+                        class="pt-3 pb-5 text-center"
+                      >
+                        VISI
+                      </h3>
+                      <div style="color: #fccb1c" class="col-md-12 text-center">
+                        <i class="fas fa-archive fa-6x"></i>
+                      </div>
+                      <p class="pt-5">
+                        SMK Telkom Purwokerto menghasilkan lulusan yang
+                        profesional di bidang Telematika, unggul di dunia kerja,
+                        mempunyai etos kerja tinggi, berbudi pekerti luhur,
+                        serta mampu berkompetisi dalam era global sampai dengan
+                        tahun 2020.
+                      </p>
+                    </div>
+                    <div class="col-md-6">
+                      <h3
+                        style="
+                          font-weight: 600;
+                          color: #640202;
+                          font-size: 36px;
+                        "
+                        class="pt-3 pb-5 text-center"
+                      >
+                        MISI
+                      </h3>
+                      <div style="color: #fccb1c" class="col-md-12 text-center">
+                        <i class="fas fa-edit fa-6x"></i>
+                      </div>
+                      <p style="line-height: 60px" class="pt-4">
+                        Menyelenggarakan proses belajar yang sesuai dengan
+                        budaya lokal dan nasional,<br />
+                        Menyelenggarakan pendidikan dan latihan yang berwawasan
+                        mutu untuk mampu berkompetisi,<br />
+                        Mengembangkan sistem pendidikan dan pelatihan yang
+                        adaptif, fleksible dan berwawasan global.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- AKHIR KATALOG -->
+
+          <!-- KEGIATAN -->
+          <div
+            class="tab-pane fade"
+            id="kegiatan"
+            role="tabpanel"
+            aria-labelledby="kegiatan-tab"
+          >
+            <!-- section -->
+            <section>
+              <div class="container pt-5 pb-5 kegiatan">
+                <div class="row text-center pt-5">
+                  <h3>Peringatan Bulan Bahasa</h3>
+                  <h4>
+                    “Menggali Potensi Literasi Peserta Didik Melalui Peringatan
+                    Bulan Bahasa”
+                  </h4>
+                </div>
+              </div>
+            </section>
+            <!-- akhir section -->
+          </div>
+          <!-- AKHIR KEGIATAN -->
+
+          <!-- PRESTASI -->
+          <div
+            class="tab-pane fade"
+            id="pres"
+            role="tabpanel"
+            aria-labelledby="pres-tab"
+          >
+            <div class="container-fluid pt-5 perpres">
+              <div class="container pt-5">
+                <div class="row text-center">
+                  <h4 class="pt-3">Juara Pada Festival Literasi Nasional</h4>
+                </div>
+                <div class="row mt-5">
+                  <p>
+                    Festival Literasi Nasional merupakan serangkaian acara dari
+                    Gerakan Sekolah Menulis Buku (GSMB). Sebagai salah satu
+                    peserta GSMB, maka SMK Telkom Sandhy Putra Purwokerto
+                    diundang untuk menghadiri acara tersebut.
+                  </p>
+                  <p>
+                    Dalam festival ini, SMK Telkom Sandhy Putra Purwokerto
+                    mendapatkan beberapa penghargaan, antara lain:
+                  </p>
+                  <p>
+                    1. Penghargaan Sekolah Aktif Literasi Tingkat Nasional
+                    <br />2. Penghargaan Juara I, II, dan III SMA SMA/SMK/MA
+                    Kategori Puisi Tingkat Sekolah <br />3. Penghargaan Juara I,
+                    II, dan III SMA/SMK/MA Kategori Cerpen Tingkat Sekolah
+                    <br />4. Serta peluncuran buku karya peserta didik SMK
+                    Telkom Sandhy Putra Purwokerto berkolaborasi dengan GSMB,
+                    dengan judul “Orasi Para Pelantang”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- AKHIR PRESTASI -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir  tab -->
+
+    <!-- scroll top button -->
+    <a class="up" href="#home"><i class="fas fa-arrow-up"></i></a>
+    <a class="wa" href="https://wa.me/085784777797"
+      ><i class="fas fa-phone"></i
+    ></a>
+    <!-- akhir scroll top -->
+
+    <footer>
+      <div class="container-fluid foot pt-5 pb-5">
+        <div class="container pt-3">
+          <div class="row">
+            <div class="col-md-3">
+              <h4>SMK TELKOM PURWOKERTO<br /></h4>
+              <p class="mt-4">
+                Jl. DI Panjaitan No.128, Karangreja, Purwokerto Kulon, Kec.
+                Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53141
+              </p>
+              <p class="small">(0281) 632138</p>
+              <p class="small">office@smktelkom-pwt.sch.id</p>
+              <p class="small">Senin - Jumat: 7:00 - 16:00</p>
+              <p class="small">Sabtu: 8:00 - 12:00</p>
+            </div>
+            <div class="col-md-3">
+              <h4>POS - POS TERBARU<br /></h4>
+              <p class="mt-4">
+                <a
+                  href="https://smktelkom-pwt.sch.id/berita/lowongan-kerja-guru-kejuruan/"
+                  >Lowongan Kerja Guru Kejuruan</a
+                >
+              </p>
+              <p class="small">18/02/2021</p>
+              <p class="small">
+                <a
+                  href="https://smktelkom-pwt.sch.id/berita/living-and-playing-akabara-28/"
+                  >Living And Playing Akabara 2018</a
+                >
+              </p>
+              <p class="small">01/02/2021</p>
+              <p class="small">
+                <a
+                  href="https://smktelkom-pwt.sch.id/berita/living-and-playing-akabara-28/"
+                  >Lepas Sambut Kepala SMK Telkom Purwokerto</a
+                >
+              </p>
+              <p class="small">01/02/2021</p>
+            </div>
+            <div class="col-md-2">
+              <h4>PETA SITUS<br /></h4>
+              <p class="mt-4">Beranda</p>
+              <p class="small">Tentang Kami</p>
+              <p class="small">Berita</p>
+              <p class="small">Alumni</p>
+              <p class="small">Helpdesk</p>
+              <p class="small">PPDB</p>
+            </div>
+            <div class="col-md-4">
+              <h4>ALAMAT<br /></h4>
+              <iframe
+                class="mt-4"
+                style="border-radius: 2%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7912.585450118895!2d109.24357391352635!3d-7.432824793223536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e9d1768e4d1%3A0x959269c10818fa0c!2sSMK%20Telkom%20Purwokerto!5e0!3m2!1sid!2sid!4v1614132098738!5m2!1sid!2sid"
+                width="100%"
+                height="80%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background-color: rgb(27, 24, 41)" class="container-fluid">
+        <div
+          style="
+            background-color: rgb(27, 24, 41);
+            height: 40px;
+            font-size: 13px;
+          "
+          class="footer pt-2"
+        >
+          <div class="row">
+            <div class="col-sm-8 text-center">
+              <p style="color: rgb(241, 241, 241)">
+                Copyright &copy; 2021 - SMK Telkom Purwokerto
+              </p>
+            </div>
+            <div class="col-sm-4 justify-content-end">
+              <a style="color: #f8f9fa" href=""
+                ><i class="fab fa-instagram justify-content-end"></i
+              ></a>
+              <a style="color: #f8f9fa" href=""
+                ><i class="fab fa-facebook ml-30 justify-content-end"></i
+              ></a>
+              <a style="color: #f8f9fa" href=""
+                ><i class="fab fa-youtube ml-30 justify-content-end"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+
+        // Hide all slides
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        // Remove active class from all dots
+        for (i = 0; i < dots.length; i++) {
+          dots[i].style.backgroundColor = "#bbb";
+        }
+
+        // Show the current slide and add active class to the corresponding dot
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].style.backgroundColor = "#717171";
+
+        // Change image every 3 seconds
+        setTimeout(showSlides, 3000);
+      }
+    </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
